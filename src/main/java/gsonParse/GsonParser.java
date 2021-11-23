@@ -7,10 +7,10 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class GsonParser {
-    public Root parse(String path){
+    public Root parse(){
         Gson gson=new Gson();
 
-        try(FileReader reader=new FileReader(path)) {
+        try(FileReader reader=new FileReader("src/main/java/tickets.json")) {
             Root root = gson.fromJson(reader,Root.class);
 
             return root;

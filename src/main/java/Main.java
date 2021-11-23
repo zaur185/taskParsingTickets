@@ -14,9 +14,7 @@ public class Main {
         String resultPercentile;
         String time;
 
-        Scanner scanner =new Scanner(System.in);
-        String d=scanner.nextLine();
-        time = calculator.calculate(gsonParser.parse(args[0].toString()));
+        time = calculator.calculate(gsonParser.parse());
         resultPercentile = percentile.calculatePercentile(calculator.getTimeFlying(),90);
 
         System.out.println("среднее время полета между городами Владивосток и Тель-Авив составляет->"+time);
